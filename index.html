@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Equipo Pablo - Jair - ASIX</title>
     <style>
-        /* Estilos específicos para el selector de perfiles */
         .seccion-equipo {
             height: 100vh;
             display: flex;
+            /* ESTO ARREGLA EL TÍTULO: pone los elementos en vertical */
+            flex-direction: column; 
             align-items: center;
             justify-content: center;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/habilidades.jpg');
@@ -20,7 +21,15 @@
             text-align: center;
             color: white;
             font-family: "Titillium Web", sans-serif;
+            gap: 40px; /* Añade separación entre el título y las tarjetas */
         }
+        
+        .seccion-equipo h1 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
         .contenedor-perfiles {
             display: flex;
             gap: 50px;
@@ -29,6 +38,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .tarjeta-usuario {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -42,26 +52,31 @@
             text-decoration: none;
             color: white;
         }
+
         .tarjeta-usuario:hover {
             transform: translateY(-15px);
             background: rgba(97, 20, 199, 0.3);
             border-color: #6114c7;
             box-shadow: 0 10px 30px rgba(97, 20, 199, 0.4);
         }
+
         .tarjeta-usuario i {
             font-size: 4rem;
             color: #6114c7;
             margin-bottom: 20px;
         }
+
         .tarjeta-usuario h2 {
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
         .tarjeta-usuario p {
             font-size: 1rem;
             opacity: 0.8;
             margin-bottom: 25px;
         }
+
         .btn-perfil {
             background: #6114c7;
             color: white;
@@ -71,24 +86,16 @@
             display: inline-block;
             transition: 0.3s;
         }
-        .titulo-principal {
-            position: absolute;
-            top: 50px;
-            width: 100%;
-        }
-        .titulo-principal h1 {
-            font-size: 2.5rem;
-            letter-spacing: 3px;
-        }
+
         @media (max-width: 768px) {
-            .seccion-equipo { height: auto; padding: 100px 0; }
-            .titulo-principal { position: relative; top: 0; margin-bottom: 30px; }
+            .seccion-equipo { height: auto; padding: 50px 0; }
         }
     </style>
 </head>
 <body>
     <main class="seccion-equipo">
         <h1>Equipo Pablo & Jair <span style="color: #6114c7;">2025</span></h1>
+        
         <div class="contenedor-perfiles">
             <a href="pablo.html" class="tarjeta-usuario">
                 <i class="fa-solid fa-user-gear"></i>
